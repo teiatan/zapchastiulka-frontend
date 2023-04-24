@@ -13,7 +13,7 @@ export function ProductCard({ data }) {
         }
          else{console.log('права кнопка')}
     } */
-    console.log(data);
+    
     return <ProductCardContainer to={`/product/${_id}`} /* state={{from: goBack}} */>
         <ImageThumb>
         {<ProductImage src={photo[0]? photo[pictureNumber]?.url : STOPPER} alt={photo[pictureNumber]?.alt}  height="300px"/>}
