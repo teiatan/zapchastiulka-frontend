@@ -1,5 +1,5 @@
 import { GalleryProducts } from "components/Main/GalleryProducts/GalleryProducts";
-import { Pagination } from "components/pagination/Pagination";
+//import { Pagination } from "components/pagination/Pagination";
 import { useEffect, useState } from "react";
 //import { goods } from "data/goods";
 import { useSearch } from "context/contectxtHooks";
@@ -8,9 +8,9 @@ import { apiService } from "api/apiService";
 export function GoodsList() {
     
     const search = useSearch().search;
-    const perPage = 12;
+    //const perPage = 12;
     const [allGoods, setAllGoods] = useState([]);
-    const [shownGoods, setShownGoods] = useState(allGoods.slice(0, perPage));
+    //const [shownGoods, setShownGoods] = useState(allGoods.slice(0, perPage));
     
     useEffect(()=>{
         apiService.getAllProducts().then(
@@ -21,9 +21,9 @@ export function GoodsList() {
         setShownGoods(filteredGoodsArray.slice(0, perPage)); */
     }, [search]);
         
-    const giveCuttedArray = (array) => {
+    /* const giveCuttedArray = (array) => {
     setShownGoods(array);
-    };
+    }; */
 
     return (
     <>
