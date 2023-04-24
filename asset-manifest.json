@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sapchastiulka-frontend/static/css/main.786e2273.css",
+    "main.js": "/sapchastiulka-frontend/static/js/main.c9028871.js",
+    "index.html": "/sapchastiulka-frontend/index.html",
+    "main.786e2273.css.map": "/sapchastiulka-frontend/static/css/main.786e2273.css.map",
+    "main.c9028871.js.map": "/sapchastiulka-frontend/static/js/main.c9028871.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.786e2273.css",
+    "static/js/main.c9028871.js"
+  ]
+}
