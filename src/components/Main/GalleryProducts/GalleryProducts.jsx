@@ -8,7 +8,7 @@ export function GalleryProducts({ shownGoods }) {
   return (
     <GalleryStyle>
           {shownGoods.map((data) => (
-          <ProductCard data={data} key={data.id} />
+          <ProductCard data={data} key={data._id} />
       ))}
     </GalleryStyle>
   );
