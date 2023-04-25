@@ -1,5 +1,5 @@
-import { HeaderTag, CoverDiv, MobileMenuButton, MobileMenuContainer, MobileMenuInsideContainer, HeaderSpan } from "./Header.styled";
-import { PageContainer } from "components/pageContainer/pageContainer";
+import { HeaderTag, CoverDiv, MobileMenuContainer, MobileMenuInsideContainer, HeaderSpan } from "./Header.styled";
+import { PageContainer } from "components/PageContainer/PageContainer";
 import { Logo } from "./Logo/Logo";
 import { SearchForm } from "./SearchForm/SearchForm";
 import { ThemeSwitcher } from "./ThemeSwitcher/ThemeSwitcher";
@@ -10,10 +10,11 @@ import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { Button } from "./ThemeSwitcher/ThemeSwitcher.styled";
 import { useTheme } from "@emotion/react";
-import { AuthButtons } from "../AuthButtons/authButtons";
+import { AuthButtons } from "./AuthButtons/authButtons";
 import { useIsLoggedIn, useIsMobileMenuOpened } from "context/contectxtHooks";
 import { useEffect, useState } from "react";
 import { Filter } from "./Filter/Filter";
+import { MobileMenuButton } from "./MobileMenuButton/MobileMenuButton";
 
 export function Header() {
     const mobileMenuContext = useIsMobileMenuOpened();
@@ -34,18 +35,13 @@ export function Header() {
         <HeaderTag>
             <PageContainer>
                 <CoverDiv>
+
                     <Logo />
+
                     <SearchForm />
-                    <MobileMenuButton onClick={onClickMobileMenu}>
-                        <FiMenu 
-                            className={(!isMobileMenuOpen ? 'isVisible' : 'isHidden')}
-                            color={theme.header.textColor} size={30}
-                        />
-                        <TfiClose 
-                            className={(!isMobileMenuOpen ? 'isHidden' : 'isVisible')}
-                            color={theme.header.textColor} size={30}
-                        />
-                    </MobileMenuButton>
+
+                    <MobileMenuButton />
+                    
                     <MobileMenuContainer {...(isMobileMenuOpen && {style: {display:"block"}})}>
                         <MobileMenuInsideContainer>
                             {isLoggedIn &&

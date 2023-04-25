@@ -1,6 +1,6 @@
-import { PriceFilter } from "components/PriceFilter/PriceFilter";
+import { PriceFilter } from "components/Header/PriceFilter/PriceFilter";
 import { Div } from "./Filter.styled";
-import { Categories } from "components/Categories/Categories";
+import { Categories } from "components/Header/Categories/Categories";
 
 
 export function Filter() {

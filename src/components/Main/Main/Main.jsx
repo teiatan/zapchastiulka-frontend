@@ -1,4 +1,4 @@
-import { PageContainer } from "components/pageContainer/pageContainer";
+import { PageContainer } from "components/PageContainer/PageContainer";
 import { MainStyle } from "./Main.styled";
 
 export function Main({children}){

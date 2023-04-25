@@ -1,8 +1,8 @@
-import { Button } from "../Header/ThemeSwitcher/ThemeSwitcher.styled"
+import { Button } from "../ThemeSwitcher/ThemeSwitcher.styled"
 import { useTheme } from "@emotion/react";
 import { useIsLoggedIn, useIsMobileMenuOpened } from "context/contectxtHooks";
 import { VscSignOut, VscSignIn } from "react-icons/vsc";
-import { HeaderSpan } from "../Header/Header.styled";
+import { HeaderSpan } from "../Header.styled";
 
 export function AuthButtons() {
 

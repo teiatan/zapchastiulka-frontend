@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { ProductCard } from 'components/Main/ProductCard/ProductCard';
-import { GalleryStyle } from './GalleryProducts.styled';
+import { GalleryStyle } from './ProductsList.styled';
 //import { goods } from 'data/goods';
 
-export function GalleryProducts({ shownGoods }) {
+export function ProductsList({ shownGoods }) {
 
   return (
     <GalleryStyle>
@@ -14,6 +14,6 @@ export function GalleryProducts({ shownGoods }) {
   );
 }
 
-GalleryProducts.propTypes = {
+ProductsList.propTypes = {
   shownGoods: PropTypes.array.isRequired,
 };

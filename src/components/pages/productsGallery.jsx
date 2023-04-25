@@ -1,11 +1,11 @@
-import { GalleryProducts } from "components/Main/GalleryProducts/GalleryProducts";
+import { ProductsList } from "components/Main/ProductsList/ProductsList";
 //import { Pagination } from "components/pagination/Pagination";
 import { useEffect, useState } from "react";
 //import { goods } from "data/goods";
 import { useIsLoading, useSearch } from "context/contectxtHooks";
 import { apiService } from "api/apiService";
 
-export function GoodsList() {
+export function ProductsGallery() {
     const isLoading = useIsLoading().setIsLoading;
     const search = useSearch().search;
     //const perPage = 12;
@@ -32,7 +32,7 @@ export function GoodsList() {
 
     return (
     <>
-        <GalleryProducts shownGoods={allGoods}/>
+        <ProductsList shownGoods={allGoods}/>
         {/* <Pagination
             perPage={perPage}
             array={allGoods}
