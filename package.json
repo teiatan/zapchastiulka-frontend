@@ -2,7 +2,7 @@
   "name": "zapchastiulka-frontend",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://teiatan.github.io/sapchastiulka-frontend/",
+  "homepage": "https://teiatan.github.io/zapchastiulka-frontend/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

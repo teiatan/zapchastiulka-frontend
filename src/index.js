@@ -8,7 +8,7 @@ import { ContextProvider } from 'context/contextProvider';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ContextProvider>
-      <BrowserRouter basename="sapchastiulka-frontend">
+      <BrowserRouter basename="zapchastiulka-frontend">
         <App />
       </BrowserRouter>
     </ContextProvider>
