@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "components/Layout/Layout";
 import { ProductsGallery } from "components/pages/productsGallery";
+import { Layout } from "components/Layout/Layout";
 import { ProductDetails } from "components/pages/productDetails";
 import { Profile } from "components/pages/profile";
 import { Basket } from "components/pages/basket";
