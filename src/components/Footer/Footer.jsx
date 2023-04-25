@@ -1,5 +1,5 @@
 import { FooterTag, AddressTag } from "./Footer.styled";
-import { PageContainer } from "components/PageContainer/PageContainer";
+import { PageContainer } from "components/PageContainer/PageContainer.jsx";
 
 export function Footer() {
     return (
