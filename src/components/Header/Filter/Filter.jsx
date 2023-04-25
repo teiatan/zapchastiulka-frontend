@@ -3,7 +3,7 @@ import { Div } from "./Filter.styled";
 import { Categories } from "components/Categories/Categories";
 
 
-export function Filter({setIsFilterOpen}) {
+export function Filter() {
     return (
         <Div>
             <h2>Filter</h2>

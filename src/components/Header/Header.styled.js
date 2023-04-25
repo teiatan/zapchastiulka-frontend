@@ -49,6 +49,7 @@ export const MobileMenuContainer = styled.div`
     right: 0;
     background-color: ${props => props.theme.header.backgroundColor};
     width: 260px;
+    z-index: 100;
 
   }
 `;
