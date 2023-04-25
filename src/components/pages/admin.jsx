@@ -1,5 +1,10 @@
+import { AddNewProductForm } from "components/Main/AddNewProductForm/AddNewProductForm";
+
 export function AdminPage() {
     return(
-        <p>Admin page</p>
+        <>
+        <h1>Додати новий товар</h1>
+        <AddNewProductForm />
+        </>
     )
 }
