@@ -24,7 +24,7 @@ export function GoodsList() {
         /* const filteredGoodsArray = goods.filter(goodsItem => goodsItem.name.toLowerCase().includes(search));
         setAllGoods(filteredGoodsArray);
         setShownGoods(filteredGoodsArray.slice(0, perPage)); */
-    }, [search]);
+    }, [search, isLoading]);
         
     /* const giveCuttedArray = (array) => {
     setShownGoods(array);
