@@ -1,5 +1,5 @@
 import { HeaderTag, CoverDiv, MobileMenuContainer, MobileMenuInsideContainer } from "./Header.styled";
-import { PageContainer } from "components/Header/PageContainer/PageContainer.jsx";
+import { PageContainer } from "components/PageContainer/PageContainer.jsx";
 import { Logo } from "./Logo/Logo";
 import { SearchForm } from "./SearchForm/SearchForm";
 import { ThemeSwitcher } from "./ThemeSwitcher/ThemeSwitcher";
