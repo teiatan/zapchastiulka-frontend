@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/zapchastiulka-frontend/static/css/main.786e2273.css",
-    "main.js": "/zapchastiulka-frontend/static/js/main.592a86ca.js",
+    "main.js": "/zapchastiulka-frontend/static/js/main.fe7588e6.js",
     "index.html": "/zapchastiulka-frontend/index.html",
     "main.786e2273.css.map": "/zapchastiulka-frontend/static/css/main.786e2273.css.map",
-    "main.592a86ca.js.map": "/zapchastiulka-frontend/static/js/main.592a86ca.js.map"
+    "main.fe7588e6.js.map": "/zapchastiulka-frontend/static/js/main.fe7588e6.js.map"
   },
   "entrypoints": [
     "static/css/main.786e2273.css",
-    "static/js/main.592a86ca.js"
+    "static/js/main.fe7588e6.js"
   ]
 }
