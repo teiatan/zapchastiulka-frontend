@@ -4,6 +4,7 @@ import { Footer } from "../Footer/Footer";
 import { ThemeProvider } from "@emotion/react";
 import { Outlet } from "react-router-dom";
 import { useThemeColors } from "context/contectxtHooks";
+import { Loader } from "components/Loader/Loader";
 
 export function Layout() {
     
@@ -18,6 +19,8 @@ export function Layout() {
             </Main>
         
             <Footer />
+
+            <Loader />
         </ThemeProvider>
     )
 }
