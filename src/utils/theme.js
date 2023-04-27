@@ -5,8 +5,8 @@ class Theme {
     constructor({header, main, footer, productCard, pagination}) {
 
         this.header = header ?? {
-            backgroundColor: "rgba(247, 169, 168, 1)",
-            background: "linear-gradient(to right, #f7797d, #FBD786, #C6FFDD)",
+            backgroundColor: "#93bec2",
+            background: "#93bec2",
             textColor: "rgba(97, 63, 117, 1)",
             formBorder: "rgba(255, 255, 255)",
             formBackground: "rgb(255,255, 255)",
@@ -15,14 +15,14 @@ class Theme {
         };
 
         this.main = main ?? {
-            background: "rgba(206, 198, 225, 0.1)",
-            backgroundDots: "rgba(247, 169, 168, 0.4)",
+            background: "white",
+            backgroundDots: "white",
             
         };
 
         this.footer = footer ?? {
             backgroundColor: "rgba(247, 169, 168, 1)",
-            background: "linear-gradient(to left, #f7797d, #FBD786, #C6FFDD)",
+            background: "#93bec2",
             textColor: "rgba(97, 63, 117, 1)",
         };
 
