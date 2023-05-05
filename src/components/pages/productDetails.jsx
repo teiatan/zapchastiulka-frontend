@@ -14,15 +14,25 @@ export function ProductDetails() {
         );
     }, [productId]);
 
-    console.log(productData.photo[0]);
-const {name, availability, manufactureId, photo} = productData;
+    console.log(productData);
+const {name, availability, manufactureId, photo, manufacturer, price, units, _id} = productData;
     return(
         <>
             <p>Product details page</p>
             <p>{name}</p>
             <p>{availability}</p>
             <p>Артикул: {manufactureId}</p>
-            <img src={photo[imageNumber]?.url} alt={photo[imageNumber].alt}></img>
+            {photo && <img src={photo[imageNumber]?.url} alt={photo[imageNumber].alt}></img>}
+            <div>
+                <h3>Виробник</h3>
+                {manufacturer.country && <p>Країна {manufacturer.country}</p>}
+                {manufacturer.factory && <p>Завод {manufacturer.factory}</p>}
+                {manufacturer.trademark && <p>Торгова марка {manufacturer.trademark}</p>}
+            </div>
+            <div>
+                {price} грн/{units}
+            </div>
+            <p>Унікальний номер товару: {_id}</p>
         </>
         
     )
