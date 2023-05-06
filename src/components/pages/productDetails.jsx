@@ -2,6 +2,7 @@ import { apiService } from "api/apiService";
 import { useIsLoading } from "context/contectxtHooks";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BasketButtons } from "../functionalElements/BasketButtons/BasketButtons";
 
 
 export function ProductDetails() {
@@ -31,6 +32,7 @@ export function ProductDetails() {
                 {price} грн/{units}
             </div>
             {photo && <img src={photo[imageNumber]?.url} alt={photo[imageNumber].alt}></img>}
+            <BasketButtons />
             <div>
                 <h3>Виробник</h3>
                 {manufacturer?.country && <p>Країна {manufacturer.country}</p>}
