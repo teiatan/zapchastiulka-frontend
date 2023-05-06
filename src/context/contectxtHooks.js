@@ -4,6 +4,7 @@ import { SearchContext } from "./search";
 import { IsLoggedInContext } from "./isLoggedIn";
 import { IsMobileMenuOpenContext } from "./isMobileMenuOpen";
 import { IsLoadingContext } from "./isLoading";
+import { BasketContext } from "./basket";
 
 
 export const useThemeColors = () => useContext(ThemeContext);
@@ -15,3 +16,5 @@ export const useIsLoggedIn = () => useContext(IsLoggedInContext);
 export const useIsMobileMenuOpened = () => useContext(IsMobileMenuOpenContext);
 
 export const useIsLoading = () => useContext(IsLoadingContext);
+
+export const useBasket = () => useContext(BasketContext);

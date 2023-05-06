@@ -20,8 +20,8 @@ export function ProductDetails() {
         );
     }, [productId, isLoading]);
 
-    console.log(productData);
     const {name, availability, manufactureId, photo, manufacturer, price, units, _id} = productData;
+    
     return(
         <>
             <h1>{name}</h1>
