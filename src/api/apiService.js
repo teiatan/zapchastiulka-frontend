@@ -1,10 +1,10 @@
 class ApiService {
-    baseUrl = 'https://internet-shop.onrender.com/api/products';
+    baseUrl = 'https://internet-shop.onrender.com';
 
     async getAllProducts() {
         let products = [];
         try {
-            await fetch(this.baseUrl)
+            await fetch(`${this.baseUrl}/api/products`)
             .then(response =>  response.json())
             .then(data => products = data)
         } catch(error) {
@@ -16,7 +16,7 @@ class ApiService {
     async getproductById(productId) {
         let productData = [];
         try {
-            await fetch(`${this.baseUrl}/${productId}`)
+            await fetch(`${this.baseUrl}/api/products/${productId}`)
             .then(response =>  response.json())
             .then(data => productData = data)
         } catch(error) {
