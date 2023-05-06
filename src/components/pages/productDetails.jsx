@@ -1,4 +1,5 @@
 import { apiService } from "api/apiService";
+import { useIsLoading } from "context/contectxtHooks";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -7,15 +8,20 @@ export function ProductDetails() {
     const [productData, setProductData] = useState({});
     const { productId } = useParams();
     const [imageNumber] = useState(0);
+    const isLoading = useIsLoading().setIsLoading;
 
     useEffect(()=>{
+        isLoading(true);
         apiService.getproductById(productId).then(
-          response => setProductData(response)
+          response => {
+            setProductData(response)
+            isLoading(false);
+          }
         );
-    }, [productId]);
+    }, [productId, isLoading]);
 
     console.log(productData);
-const {name, availability, manufactureId, photo, manufacturer, price, units, _id} = productData;
+    const {name, availability, manufactureId, photo, manufacturer, price, units, _id} = productData;
     return(
         <>
             <p>Product details page</p>
@@ -25,9 +31,9 @@ const {name, availability, manufactureId, photo, manufacturer, price, units, _id
             {photo && <img src={photo[imageNumber]?.url} alt={photo[imageNumber].alt}></img>}
             <div>
                 <h3>Виробник</h3>
-                {manufacturer.country && <p>Країна {manufacturer.country}</p>}
-                {manufacturer.factory && <p>Завод {manufacturer.factory}</p>}
-                {manufacturer.trademark && <p>Торгова марка {manufacturer.trademark}</p>}
+                {manufacturer?.country && <p>Країна {manufacturer.country}</p>}
+                {manufacturer?.factory && <p>Завод {manufacturer.factory}</p>}
+                {manufacturer?.trademark && <p>Торгова марка {manufacturer.trademark}</p>}
             </div>
             <div>
                 {price} грн/{units}
