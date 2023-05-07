@@ -32,7 +32,7 @@ export function ProductDetails() {
                 {price} грн/{units}
             </div>
             {photo && <img src={photo[imageNumber]?.url} alt={photo[imageNumber].alt}></img>}
-            <BasketButtons />
+            <BasketButtons productId={_id}/>
             <div>
                 <h3>Виробник</h3>
                 {manufacturer?.country && <p>Країна {manufacturer.country}</p>}

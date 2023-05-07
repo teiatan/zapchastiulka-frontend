@@ -1,15 +1,29 @@
-import { useState } from "react"
+import { useBasket } from "context/contectxtHooks";
+import { useEffect, useState } from "react"
 
-export function BasketButtons({id}) {
+export function BasketButtons({productId}) {
+    const [isInBasket, setIsInBasket] = useState(false);
 
-    const [isInBasket, setIsInBasket] = useState(true);
+    const basket = useBasket();
 
+    useEffect(()=> {
+        setIsInBasket(basket.basket.includes(productId));
+    }, [basket.basket, productId])
+
+    const addToBasket = () => {
+        basket.addToBasket(productId);
+    };
+
+    const removeFromBasket = () => {
+        basket.removeFromBasket(productId);
+    };
 
     return (
         <>
         {isInBasket ?
-        <button>Add to basket</button>:
-        <button>Remove from basket</button>}
+        <button onClick={removeFromBasket}>Remove from basket</button>:
+        <button onClick={addToBasket}>Add to basket</button>
+        }
         </>    
     )
 }
