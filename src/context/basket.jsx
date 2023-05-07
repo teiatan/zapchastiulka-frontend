@@ -9,6 +9,10 @@ export const BasketContextProvider = ({children}) => {
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }, [basket]);
 
+    const isInBasket = (productId) => {
+        return basket.includes(productId);
+    };
+
     const addToBasket = (productId) => {
         const newBasket = [...basket, productId];
         setBasket(newBasket);
@@ -20,7 +24,7 @@ export const BasketContextProvider = ({children}) => {
     };
 
     return (
-        <BasketContext.Provider value={{basket, addToBasket, removeFromBasket}}>
+        <BasketContext.Provider value={{basket, addToBasket, removeFromBasket, isInBasket}}>
             {children}
         </BasketContext.Provider>
     )

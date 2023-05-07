@@ -1,14 +1,8 @@
 import { useBasket } from "context/contectxtHooks";
-import { useEffect, useState } from "react"
 
 export function BasketButtons({productId}) {
-    const [isInBasket, setIsInBasket] = useState(false);
 
     const basket = useBasket();
-
-    useEffect(()=> {
-        setIsInBasket(basket.basket.includes(productId));
-    }, [basket.basket, productId])
 
     const addToBasket = () => {
         basket.addToBasket(productId);
@@ -20,7 +14,7 @@ export function BasketButtons({productId}) {
 
     return (
         <>
-        {isInBasket ?
+        {basket.isInBasket(productId) ?
         <button onClick={removeFromBasket}>Remove from basket</button>:
         <button onClick={addToBasket}>Add to basket</button>
         }
