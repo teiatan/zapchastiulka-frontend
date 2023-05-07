@@ -98,3 +98,13 @@ export const Description = styled.p`
   line-height: 1;
   text-align: justify;
 `;
+
+export const BasketContainer = styled.div`
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+`;
+
+export const MainDiv = styled.div`
+  position: relative;
+`;

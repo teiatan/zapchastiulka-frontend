@@ -3,6 +3,7 @@ const { createContext, useState, useEffect } = require("react");
 export const BasketContext = createContext();
 
 export const BasketContextProvider = ({children}) => {
+    
     const [basket, setBasket] = useState(() => JSON.parse(window.localStorage.getItem('basket')) ?? []);
 
     useEffect(()=> {

@@ -7,8 +7,8 @@ export function BasketButtons({productId}) {
     return (
         <>
         {basket.isInBasket(productId) ?
-        <button onClick={() => basket.removeFromBasket(productId)}>Remove from basket</button>:
-        <button onClick={() => basket.addToBasket(productId)}>Add to basket</button>
+        <button onClick={() => basket.removeFromBasket(productId)}>Додати в корзину</button>:
+        <button onClick={() => basket.addToBasket(productId)}>Видалити з корзини</button>
         }
         </>    
     )
