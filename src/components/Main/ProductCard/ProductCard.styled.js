@@ -100,9 +100,10 @@ export const Description = styled.p`
 `;
 
 export const BasketContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   bottom: 120px;
-  right: 0;
+  right: 0; */
+  z-index: 100;
 `;
 
 export const MainDiv = styled.div`

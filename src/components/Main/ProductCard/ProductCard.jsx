@@ -1,5 +1,5 @@
 import { BasketButtons } from "components/functionalElements/BasketButtons/BasketButtons";
-import { ImageThumb, ProductCardContainer, ProductImage, InfoCard, Name, Price, Description, BasketContainer, MainDiv } from "./ProductCard.styled";
+import { ImageThumb, ProductCardContainer, ProductImage, InfoCard, Name, Price, Description, BasketContainer } from "./ProductCard.styled";
 import PropTypes from 'prop-types';
 import { useState } from "react";
 const STOPPER = "https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg"
@@ -15,8 +15,7 @@ export function ProductCard({ data }) {
          else{console.log('права кнопка')}
     } */
     
-    return <MainDiv>
-        <ProductCardContainer to={`/product/${_id}`} /* state={{from: goBack}} */>
+    return <ProductCardContainer to={`/product/${_id}`} /* state={{from: goBack}} */>
         <ImageThumb>
         {<ProductImage src={photo[0]? photo[pictureNumber]?.url : STOPPER} alt={photo[pictureNumber]?.alt}  height="300px"/>}
             {/* {photo.length > 1 &&
@@ -34,12 +33,10 @@ export function ProductCard({ data }) {
             <Price>    {price} грн/{units}</Price>
             <p>{availability}</p>
         </InfoCard>
+        <BasketContainer>
+            <BasketButtons productId={_id} />
+        </BasketContainer>
     </ProductCardContainer>
-    <BasketContainer>
-        <BasketButtons productId={_id} />
-    </BasketContainer>
-    
-    </MainDiv>
 }
 
 ProductCard.propTypes ={
